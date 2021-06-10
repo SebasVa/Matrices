@@ -1,0 +1,50 @@
+filas = int(input("Ingrese el numero de filas: "))
+
+columnas = int(input("Ingrese el numero de columnas: "))
+
+matriz = []
+
+for i in range(filas):
+    matriz.append([])
+    for j in range(columnas):
+        valor = float(input("Fila {}, Columna {} : ".format(i+1, j+1)))
+        matriz[i].append(valor)
+        
+filas2 = int(input("Ingrese el numero de filas: "))
+
+columnas2 = int(input("Ingrese el numero de columnas: "))
+
+matriz2 = []
+
+for i in range(filas2):
+    matriz2.append([])
+    for j in range(columnas2):
+        valor2 = float(input("Fila {}, Columna {} : ".format(i+1, j+1)))
+        matriz2[i].append(valor2)
+        
+for fila in matriz:
+    print("[", end=" ")
+    for elemento in fila:
+        print("{:}".format(elemento), end=" ")
+        
+    print("]")
+    
+for fila2 in matriz2:
+    print("[", end=" ")
+    for elemento2 in fila2:
+        print("{:}".format(elemento2), end=" ")
+        
+    print("]")
+    
+matrizr = []
+for r in range (0,filas):
+    for c in range (0, columnas2):
+        for k in range(0, filas2):
+            matrizr[r, c] += matriz[r, k]*matriz2[k,c]
+            
+ for fila in matrizr:
+    print("[", end=" ")
+    for elemento3 in fila:
+        print("{:}".format(elemento3), end=" ")
+        
+    print("]")
